@@ -8,11 +8,13 @@ import (
 
 func main() {
 	myWindow := webui.NewWindow()
-	err := myWindow.Show("<html><script src=\"webui.js\"></script> Hello World from Go! </html>")
+	err := myWindow.Show("<html><script src=\"webui.js\"></script> Goto <a href='https://cn.bing.com/'>bing</a> </html>")
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(-1)
 	}
+	// or
+	// myWindow.Navigate("https://cn.bing.com/")
 	webui.Wait()
 }
 
